@@ -4,8 +4,12 @@
 import React from 'react';
 
 export const metadata = {
-  title: "Shop | Pack LIte",
+  title: "Shop | Pack Lite",
   description: "Curated affiliate products with emotional resonance and modular UX.",
+  icons: {
+    icon: '/favicon.ico',      // ✅ correct
+  },
+  manifest: '/manifest.json',   // ✅ correct
 };
 
 const Home: React.FC = () => {
