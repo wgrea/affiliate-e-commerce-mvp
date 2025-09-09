@@ -4,9 +4,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import './globals.css';
-import Header from '@/components/Header'; // ADD THESE IMPORTS
-import Footer from '@/components/Footer'; // ADD THIS IMPORT
-import CartIndicator from '@/components/CartIndicator'; // ✅ Add this
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import CartIndicator from '@/components/CartIndicator';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +21,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Pack Lite | Travel Light. Look Bold.",
   description: "Stylish jumpsuits & travelwear curated for the modern nomad. Built with modular UX and emotional resonance.",
+  icons: {
+    icon: '/favicon.ico', // ✅ Must exist in public/favicon.ico
+  },
+  manifest: '/manifest.json', // ✅ Must exist in public/manifest.json
 };
+
 export default function RootLayout({
   children,
 }: {
